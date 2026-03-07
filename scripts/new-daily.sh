@@ -2,17 +2,17 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-TEMPLATE_PATH="$REPO_ROOT/docs/templates/daily-template.md"
+TEMPLATE_PATH="$REPO_ROOT/模板/日志模板.md"
 
 usage() {
   cat <<'USAGE'
 用法:
-  scripts/new-daily.sh                # 生成今天的日更文件
-  scripts/new-daily.sh YYYY-MM-DD     # 生成指定日期的日更文件
+  scripts/new-daily.sh                # 生成今天的日志文件
+  scripts/new-daily.sh YYYY-MM-DD     # 生成指定日期的日志文件
 
 示例:
   scripts/new-daily.sh
-  scripts/new-daily.sh 2026-03-08
+  scripts/new-daily.sh 2026-03-09
 USAGE
 }
 
@@ -29,7 +29,7 @@ if ! [[ "$INPUT_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
 fi
 
 YEAR="${INPUT_DATE:0:4}"
-TARGET_DIR="$REPO_ROOT/docs/daily/$YEAR"
+TARGET_DIR="$REPO_ROOT/日志/$YEAR"
 TARGET_FILE="$TARGET_DIR/$INPUT_DATE.md"
 
 if [[ ! -f "$TEMPLATE_PATH" ]]; then

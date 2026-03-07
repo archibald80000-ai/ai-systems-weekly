@@ -1,87 +1,60 @@
-# ai-systems-weekly
+# AI 系统周刊（ai-systems-weekly）
 
-一个面向中文读者的「AI 系统周刊」项目：
-每天记录值得分享的 AI 科技内容，每周沉淀成结构化周刊。
+公开记录我对 AI 系统、Agent 与自动化的每日观察，以及每周沉淀。
 
-## 项目目标
-- **日更采集**：每天早上 8:00 完成当天素材整理（论文 / 新闻 / 工具 / 实战坑点）。
-- **定时发布**：每天 10:00 发布当日摘要或卡片内容。
-- **周更复盘**：按周输出系统化总结，沉淀为可复用的方法论与实践指南。
+这是我的对外内容仓库：用于持续发布我看到的值得分享的 AI 科技信息、个人判断与方法论。
 
-## 对标项目与内容组织
-本项目借鉴了 [ruanyf/weekly](https://github.com/ruanyf/weekly) 的内容组织思路：
-- 先有「素材池」和「日常记录」
-- 再做「周刊归档」
-- 模板化写作，降低持续输出成本
+## 内容导航
+
+### 最新期刊
+- [第01期（2026）](./期刊/2026/第01期.md)
+
+### 最近日志
+- [2026-03-08](./日志/2026/2026-03-08.md)
+- [2026-03-07](./日志/2026/2026-03-07.md)
+
+### 选题池
+- [选题池入口](./选题池/README.md)
+
+## 更新节奏
+- 日志：持续更新
+- 期刊：按周归档发布
+
+## 我关注的主题
+- AI 系统与工程实践
+- Agent 与多工具协同
+- 自动化工作流与效率系统
+- AI 产品 / 工具 / 新闻 / 论文
+- 可复用的方法论与踩坑复盘
 
 ## 仓库结构
 
 ```text
 .
 ├── README.md
-├── scripts
-│   └── new-daily.sh
-├── docs
-│   ├── issue-1.md
-│   ├── daily
-│   │   └── 2026
-│   │       └── 2026-03-07.md
-│   ├── weekly
-│   │   └── 2026
-│   │       └── 2026-W09.md
-│   ├── inbox
-│   │   └── README.md
-│   └── templates
-│       ├── daily-template.md
-│       ├── weekly-template.md
-│       ├── paper-template.md
-│       ├── eval-template.md
-│       └── rag-template.md
+├── 期刊
+│   └── 2026
+│       └── 第01期.md
+├── 日志
+│   └── 2026
+│       ├── 2026-03-07.md
+│       └── 2026-03-08.md
+├── 选题池
+│   ├── README.md
+│   └── 草稿-第一期.md
+├── 模板
+│   ├── 日志模板.md
+│   ├── 期刊模板.md
+│   ├── 论文卡片模板.md
+│   ├── 评测模板.md
+│   └── RAG案例模板.md
+└── scripts
+    └── new-daily.sh
 ```
 
-## 写作流程（建议）
+## 辅助脚本
+- 一键生成日志文件：`scripts/new-daily.sh`
+- 示例：`scripts/new-daily.sh 2026-03-09`
 
-### 每天 8:00（写）
-1. 运行 `scripts/new-daily.sh` 自动生成当天文档。
-2. 从 `docs/inbox/README.md` 的素材池挑选 3-5 条重点。
-3. 使用模板写出：
-   - 今日结论
-   - 关键链接
-   - 可落地启发
-   - 待验证问题
-
-### 每天 10:00（发）
-1. 检查当天文稿中的事实和链接。
-2. 发布到目标平台（公众号 / 社区 / 社媒）。
-3. 将发布链接回填到当天记录里，形成闭环。
-
-### 每周末（归档）
-1. 回看本周 7 天日更。
-2. 提炼成 `docs/weekly/<year>/YYYY-Wxx.md`。
-3. 按「Papers / Evals / RAG / Badcases」分类沉淀。
-
-## 快速开始
-1. 运行 `scripts/new-daily.sh` 新建今日条目。
-2. 复制 `docs/templates/weekly-template.md` 新建本周周刊。
-3. 每天至少沉淀 1 个「可复用经验」和 1 个「可验证问题」。
-
-## 一键生成当天日更
-
-```bash
-scripts/new-daily.sh
-```
-
-也支持指定日期：
-
-```bash
-scripts/new-daily.sh 2026-03-08
-```
-
-## 上传到你的 GitHub 仓库
-
-如果本地仓库还没有 remote，可执行：
-
-```bash
-git remote add origin https://github.com/archibald80000-ai/ai-systems-weekly.git
-git push -u origin HEAD
-```
+## 交流方式
+- https://blog.csdn.net/Assert_SL?spm=1000.2115.3001.10640
