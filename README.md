@@ -57,4 +57,4 @@
 - 示例：`scripts/new-daily.sh 2026-03-09`
 
 ## 交流方式
-- 暂未添加（后续补充）
+- https://blog.csdn.net/Assert_SL?spm=1000.2115.3001.10640
