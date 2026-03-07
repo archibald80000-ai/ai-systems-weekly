@@ -19,6 +19,8 @@
 ```text
 .
 ├── README.md
+├── scripts
+│   └── new-daily.sh
 ├── docs
 │   ├── issue-1.md
 │   ├── daily
@@ -40,7 +42,7 @@
 ## 写作流程（建议）
 
 ### 每天 8:00（写）
-1. 在 `docs/daily/<year>/YYYY-MM-DD.md` 新建当天记录。
+1. 运行 `scripts/new-daily.sh` 自动生成当天文档。
 2. 从 `docs/inbox/README.md` 的素材池挑选 3-5 条重点。
 3. 使用模板写出：
    - 今日结论
@@ -59,12 +61,27 @@
 3. 按「Papers / Evals / RAG / Badcases」分类沉淀。
 
 ## 快速开始
-1. 复制 `docs/templates/daily-template.md` 新建今日条目。
+1. 运行 `scripts/new-daily.sh` 新建今日条目。
 2. 复制 `docs/templates/weekly-template.md` 新建本周周刊。
 3. 每天至少沉淀 1 个「可复用经验」和 1 个「可验证问题」。
 
----
-如果你愿意，我下一步可以继续帮你补：
-- 自动创建当天文档的脚本（按日期生成）
-- GitHub Actions 定时提醒（8:00 写、10:00 发）
-- 统一的发布检查清单（链接、事实、标签）
+## 一键生成当天日更
+
+```bash
+scripts/new-daily.sh
+```
+
+也支持指定日期：
+
+```bash
+scripts/new-daily.sh 2026-03-08
+```
+
+## 上传到你的 GitHub 仓库
+
+如果本地仓库还没有 remote，可执行：
+
+```bash
+git remote add origin https://github.com/archibald80000-ai/ai-systems-weekly.git
+git push -u origin HEAD
+```
