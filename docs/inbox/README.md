@@ -10,3 +10,10 @@
 - 日更中尚未整理成体系的观察
 
 当某条素材足够明确时，再转入 `docs/daily/` 或 `docs/weekly/`。
+
+## 推荐用法
+
+- 复制 [submission-template.md](./submission-template.md)
+- 重命名为 `YYYY-MM-DD.md`
+- 把当天的链接、想法和判断填进去
+- 让自动化优先读取当天文件进行选题整理与写作启动
